@@ -1,0 +1,95 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+	<meta charset="UTF-8"> 
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0"> 
+	<title>Dark Mode</title> 
+	
+	<script src= 
+"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"> 
+	</script> 
+	
+	<style> 
+		body{ 
+		padding:10% 3% 10% 3%; 
+		text-align:center; 
+		} 
+		img{ 
+			height:140px; 
+				width:140px; 
+		} 
+		h1{ 
+		color: #32a852; 
+		} 
+		.mode { 
+			float:right; 
+		} 
+		.switch { 
+			cursor: pointer; 
+			border: 1px solid #555; 
+			border-radius: 40%; 
+			width: 20px; 
+			text-align: center; 
+			padding: 5px; 
+			margin-left: 8px; 
+		} 
+		.dark{ 
+			background-color: #222; 
+			color: #e6e6e6; 
+		} 
+	</style> 
+</head> 
+
+<body> 
+	<div class="mode"> 
+		Dark mode:			 
+		<span class="switch">OFF</span> 
+	</div> 
+	
+	<div> 
+		<h1>Google</h1> 
+		<p><i>Search Anything!</i></p> 
+		<h3>Light and Dark Mode</h3> 
+		
+	<img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google" style="width:300px;height:100px;">
+
+		<p> 
+			Click on the switch on top-right 
+			to move to dark mode. 
+		</p> 
+	</div> 
+	
+	<script> 
+		
+        if (localStorage.getItem("mode") == "dark") {
+
+		 $( "body" ).addClass( "dark" );
+            $(".switch" ).text( "ON" );
+
+        } else if (localStorage.getItem("mode") == "light"){
+            $( "body" ).removeClass( "dark" );
+            $( ".switch" ).text( "OFF" );
+        }
+
+ 	$( ".switch" ).on("click", function() {
+
+        if( $( "body" ).hasClass( "dark" )) {
+          $( "body" ).removeClass( "dark" );
+          $( ".switch" ).text( "OFF" );
+          localStorage.setItem("mode","light");
+
+        } else {
+
+          $( "body" ).addClass( "dark" );
+          $( ".switch" ).text( "ON" );
+          localStorage.setItem("mode","dark");
+          console.log(localStorage.setItem("mode","dark"))
+
+        }
+    });
+
+	</script> 
+</body> 
+
+</html> 
