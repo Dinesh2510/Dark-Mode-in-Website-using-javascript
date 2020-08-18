@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Daily Expenses</title>
+    <link rel="icon" href="https://angular.io/assets/images/logos/angular/angular.svg" type="image/gif" sizes="16x16">
+
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+    <style>
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <ion-app>
+        <ion-header>
+            <ion-toolbar color=primary>
+                <ion-title>Daily Expenses</ion-title>
+            </ion-toolbar>
+        </ion-header>
+        <ion-content>
+
+            <ion-grid>
+                <ion-row>
+                    <ion-col size-md="6" offset-md="3">
+                        <ion-card>
+                            <ion-card-header>
+                                <img class="center" src="https://i.imgur.com/YOOgi4r.png" style="width: 100px;
+                                height: 100px;
+                                border-radius: 50%;" alt="Avatar">
+                                <ion-card-title style="text-align: center;">Daily Expenses </ion-card-title>
+                            </ion-card-header>
+                            <ion-card-content>
+                                <ion-item>
+                                    <ion-label position="floating">Name Of Product</ion-label>
+                                    <ion-input id="user_product" type="text"></ion-input>
+                                </ion-item>
+                                <ion-item>
+                                    <ion-label position="floating">Quantity</ion-label>
+                                    <ion-input id="user_quantity" type="number"> </ion-input>
+                                </ion-item>
+                                <ion-item>
+                                    <ion-label position="floating">Price (₹)</ion-label>
+                                    <ion-input id="user_price" type="number"> </ion-input>
+                                </ion-item>
+                                <div style="margin: 10px;align-content: end;float: right;">
+                                    <ion-button id="submit">
+                                        <ion-icon slot=start  name="add-outline"></ion-icon>Submit
+                                    </ion-button>
+                                    <ion-button id="clear" color=danger>
+                                        <ion-icon slot=start name="close-outline"></ion-icon> Clear
+                                    </ion-button>
+                                </div>
+                               
+                               
+                            </ion-card-content>
+                        </ion-card>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+            <ion-card-title style="text-align: center;">Daily Expenses Lists: </ion-card-title><br>
+                    <ion-item> <ul></ul></ion-item>
+        </ion-content>
+        
+        <ion-alert-controller></ion-alert-controller>
+    </ion-app>
+    <script src="app.js"></script>
+</body>
+
+</html>
