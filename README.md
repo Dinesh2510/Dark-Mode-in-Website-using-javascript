@@ -1,5 +1,5 @@
-# Dark-Mode-in-Website-using-javascript
-
+## Dark-Mode-in-HTML-using-javascript & Store-data-in-localstorage-using-js-and-Ionic-Framework-4.0
+#### Note : - index.html(Dark Mode using Js in html) & the Folder Contain Store data in localstorage using js and Ionic Framework 4.0
 ### The localStorage and sessionStorage properties allow to save key/value pairs in a web browser.
 - The localStorage object stores data with no expiration date. The data will not be deleted when the browser is closed, and will be available the next day, week, or year.
 
