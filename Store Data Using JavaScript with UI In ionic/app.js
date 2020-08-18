@@ -5,7 +5,6 @@ const submitbtn = document.querySelector('#submit');
 const clearbtn = document.querySelector('#clear');
 const alertbox = document.querySelector('ion-alert-controller');
 const ul = document.querySelector('ul')
-
 let itemsArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
 localStorage.setItem('items', JSON.stringify(itemsArray));
 const data = JSON.parse(localStorage.getItem('items'));
@@ -36,8 +35,7 @@ submitbtn.addEventListener('click', () => {
 
         itemsArray.push(enter_product);
         localStorage.setItem('items', JSON.stringify(itemsArray));
-        var finaltxt =enter_product + " ("+`Price:`+enter_price +", Quantity:"+ enter_quantity+")";
-        liMaker(enter_price +"data"+ enter_product + enter_quantity);
+        liMaker(enter_product + " ("+`Price:`+enter_price +", Quantity:"+ enter_quantity+")");
         inputproduct.value = "";
         inputprice.value = "";
         inputquantity.value = "";
